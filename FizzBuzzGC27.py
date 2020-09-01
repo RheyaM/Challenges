@@ -1,5 +1,5 @@
-number=0
-for x in range(21):
+number=1
+for x in range(2,21):
   if number%3==0 and number%5==0:
     print("FizzBuzz")
   elif number%3==0:
