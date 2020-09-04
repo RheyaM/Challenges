@@ -1,0 +1,7 @@
+Input=str(input("Input string"))
+x=0
+vowels=["a","i","o","e","u"]
+for x in range(5):
+    Input = Input.replace(vowels[x], "haha")
+    x=x+1
+print(Input)
