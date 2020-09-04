@@ -1,0 +1,5 @@
+rad=int(input("Input radius"))
+cir=((2*rad)*3.1415)
+area=(3.1415*(rad*rad))
+print("circumference is",cir)
+print("area is",area)
