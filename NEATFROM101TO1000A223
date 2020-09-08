@@ -1,0 +1,6 @@
+for x in range(101,1001):
+  d1=int(x/100)
+  d2=int((x-(100*d1))/10)
+  d3=x%10
+  if x%(d1+d2+d3)==0:
+    print(x)
