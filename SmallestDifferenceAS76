@@ -1,0 +1,14 @@
+List=[]
+addnumber=int(input("input first number"))
+while addnumber!=-1:
+    List.append(addnumber)
+    addnumber=int(input("input next number, input '-1' if none"))
+List.sort(reverse=True)
+x=0 
+Difference=List[x]- List[x+1]
+SmallestDifference=Difference
+for x in range((len(List))-2):
+  Difference=List[x+1]- List[x+2]
+  if Difference<SmallestDifference:
+    SmallestDifference=Difference
+print("Smallest Difference is: ",SmallestDifference)
