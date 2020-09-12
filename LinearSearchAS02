@@ -1,0 +1,13 @@
+import random
+numbers=[]
+for x in range(10):
+  numbers.append(random.randint(0,10))
+print(numbers)
+Lookfor=int(input("Input number to look for"))
+Found=False
+for x in range(len(numbers)):
+  if numbers[x]==Lookfor:
+    print("Number is in index:",x)
+    Found=True
+if Found==False:
+  print("Number not in list")
