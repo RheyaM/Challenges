@@ -1,0 +1,26 @@
+import random
+Number=[]
+for x in range(7):
+  Number.append(random.randint(0,1))
+print("{}{}{}{}{}{}{}".format(Number[0],Number[1],Number[2],Number[3],Number[4],Number[5],Number[6]))
+Parities=["odd","even"]
+Parity=random.choice(Parities)
+Answer=int(input("Input the parity bit to create {} parity".format(Parity)))
+Ones=0
+for x in range(7):
+  if Number[x]==1:
+    Ones=Ones+1
+if Parity=="even":
+  if Ones%2==Answer:
+    print("Correct")
+  else:
+    print("Wrong, correct answer is {}".format(Ones%2))
+elif Parity=="odd":
+  if Ones%2==Answer:
+    if Ones%2==0:
+      CorrectAns=1
+    else:
+      CorrectAns=0
+    print ("Wrong, correct answer is {}".format(CorrectAns))
+  else:
+    print ("Correct")
