@@ -1,0 +1,6 @@
+Word=str(input("Input word"))
+Vowels=0
+for x in range(len(Word)):
+  if Word[x]=="a" or Word[x]=="e" or Word[x]=="i" or Word[x]=="o" or Word[x]=="u":
+    Vowels=Vowels+1
+print("There are/is {} Vowel(s)".format(Vowels))
