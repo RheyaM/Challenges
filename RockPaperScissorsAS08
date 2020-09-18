@@ -1,0 +1,26 @@
+import random
+Choices=["rock","paper","scissors"]
+compchoice=random.choice(Choices)
+userchoice=int(input("Input 1 for rock, 2 for paper, 3 for scissors"))
+print(compchoice)
+if compchoice=="rock":
+  if userchoice==2:
+    print("You win")
+  elif userchoice==3:
+    print("You lose")
+  else:
+    print("Tie")
+elif compchoice=="paper":
+  if userchoice==3:
+    print("You win")
+  elif userchoice==1:
+    print("You lose")
+  else:
+    print("Tie")
+else:
+  if userchoice==1:
+    print("You win")
+  elif userchoice==2:
+    print("You lose")
+  else:
+    print("Tie")
