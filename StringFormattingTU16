@@ -1,0 +1,19 @@
+#Exercise 1
+amount=float(129)
+print(f"RM{amount}")
+
+#Exercise 2: Create a table of numbers with headings
+firstcolumn=["first column",3,2,1]
+secondcolumn=["second column",8.54,5.7777,171.777]
+thirdcolumn=["third column",11.8,92834.845,8585]
+
+
+print("\nCentred with fixed decimal points")
+i=0
+print(f"{firstcolumn[i]:^15} {secondcolumn[i]:^15} {thirdcolumn[i]:^15}")
+for i in range(3):
+    print(f"{firstcolumn[i+1]:^15.1f} {secondcolumn[i+1]:^15.1f} {thirdcolumn[i+1]:^15.1f}")
+
+#Exercise 3: Create a quick binary convertor
+number = int(input("Input number"))
+print(f"Binary: {number:b}")
