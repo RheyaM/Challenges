@@ -1,0 +1,13 @@
+def histogram(numbers):
+  for x in range(len(numbers)):
+    bar=[]
+    for variable in range(numbers[x]):
+      bar.append("*")
+    bar = ''.join(bar)
+    print(bar)
+
+
+numbers=[]
+for x in range(3):
+  numbers.append(int(input()))
+histogram(numbers)
