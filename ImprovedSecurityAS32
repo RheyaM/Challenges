@@ -1,0 +1,12 @@
+import random
+floors=int(input("Input number of floors"))
+options=[]
+for x in range(floors):
+  options.append(x+1)
+print(options)
+order=[]
+for x in range(floors):
+  floor=random.choice(options)
+  options.pop(options.index(floor))
+  order.append(floor)
+print(order)
