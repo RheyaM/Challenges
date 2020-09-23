@@ -1,0 +1,8 @@
+numbers=[]
+length=int(input("How many numbers?"))
+for x in range(length):
+  numbers.append(int(input("Input number")))
+newlist=[]
+newlist.append(numbers[0])
+newlist.append(numbers[-1])
+print(newlist)
