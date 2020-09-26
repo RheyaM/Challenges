@@ -1,0 +1,18 @@
+import random
+wordlist=["known","maybe","night","guess","tiger","teeth","tight"]
+currentword=random.choice(wordlist)
+for x in range(4):
+  userinput=str(input("Input guess"))
+  likeness=0
+  for x in range(5):
+    if userinput[x]==currentword[x]:
+      likeness=likeness+1
+  if likeness==5:
+    print("Word correct")
+    usercorrect=True
+    break 
+  else:
+    print(f"Likeness is: {likeness}")
+    usercorrect=False
+if usercorrect==False:
+  print("Out of tries")
