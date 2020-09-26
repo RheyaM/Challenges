@@ -1,0 +1,9 @@
+text=input("Input text: ")
+newtext=[]
+for x in range(len(text)):
+  if text[x]!="a" and text[x]!="e" and text[x]!="o" and text[x]!="i" and text[x]!="u" and text[x]!=" ":
+    newtext.append(text[x]+"o"+text[x])
+  else:
+    newtext.append(text[x])
+newstring=''.join(newtext)
+print(newstring)
