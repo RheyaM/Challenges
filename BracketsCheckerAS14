@@ -1,0 +1,9 @@
+userinput=input("Input: ")
+openbrackets=userinput.count("(")
+closedbrackets=userinput.count(")")
+if openbrackets==closedbrackets:
+  print("Brackets balanced")
+elif openbrackets>closedbrackets:
+  print(f"{openbrackets-closedbrackets} more open than closed brackets.")
+else:
+  print(f"{closedbrackets-openbrackets} more closed than open brackets.")
