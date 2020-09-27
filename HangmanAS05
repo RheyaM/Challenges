@@ -1,0 +1,29 @@
+import random
+wordlist=["pack","buy","sector","dealer","trap","equip","shop","black","back","urgency","charity","method","fork","thirsty"]
+wordchoice=random.choice(wordlist)
+wrongguesses=6
+lettersguessed=[0]
+board=[]
+for x in range(len(wordchoice)):
+  board.append("_")
+print("".join(board))
+print(f"{wrongguesses} guesses left")
+while wrongguesses!=0:
+  letter=0
+  while letter in lettersguessed:
+    letter=(input("Input letter:"))
+    if letter in lettersguessed:
+      print("Letter already guessed")
+  if letter not in wordchoice:
+    wrongguesses=wrongguesses-1
+    print(f"{wrongguesses} guesses left")
+  for x in range(len(wordchoice)):
+    if letter==wordchoice[x]:
+      board[x]=letter
+  lettersguessed.append(letter)
+  print("".join(board))
+  if "_" not in board:
+    print("Congrats")
+    break
+if "_" in board:
+  print("Out of guesses")
