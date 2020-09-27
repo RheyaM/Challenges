@@ -1,0 +1,5 @@
+number=int(input("Input number"))
+if number%3==0:
+  print("divisable by 3")
+else:
+  print(f"not divisable by 3, remainder {number%3}")
