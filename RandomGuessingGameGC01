@@ -1,0 +1,15 @@
+import random
+randomnumber=random.randint(0,100)
+print(randomnumber)
+userinput=0
+while userinput<1 or userinput>100:
+  try:
+    userinput=int(input("Input number"))
+  except:
+    print("Input integer between 1 to 100")
+if userinput<randomnumber:
+  print("lower than random number")
+elif userinput>randomnumber:
+  print("higher than random number")
+else:
+  print("same number :))))")
