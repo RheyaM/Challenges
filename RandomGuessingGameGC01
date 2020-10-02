@@ -1,6 +1,5 @@
 import random
 randomnumber=random.randint(0,100)
-print(randomnumber)
 userinput=0
 while userinput<1 or userinput>100:
   try:
