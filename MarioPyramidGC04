@@ -1,0 +1,11 @@
+size=int(input("input size"))
+y=0
+for x in range(size):
+  bar=[]
+  b=1
+  for b in range(b+y):
+    bar.append("*")
+    b=b+1
+  bar = ''.join(bar)
+  print(bar)
+  y=y+1
