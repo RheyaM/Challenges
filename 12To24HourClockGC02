@@ -1,0 +1,13 @@
+twelvehour=int(input("input the time"))
+amorpm=input("Input am or pm")
+if amorpm=="am":
+  if twelvehour==12:
+    print("0000")
+  else:
+    print(f"0{twelvehour}00")
+else:
+  if twelvehour==12:
+    print("1200")
+  else:
+    twelvehour=12+twelvehour
+    print(f"{twelvehour}00")
