@@ -1,0 +1,11 @@
+import random
+numbers=[]
+for x in range(random.randint(5,20)):
+  numbers.append(random.randint(1,10))
+print(numbers)
+Total=0
+Product=1
+for x in range(len(numbers)):
+  Total=Total+numbers[x]
+  Product=Product*numbers[x]
+print(f"The Sum is {Total}, and the Product is {Product}.")
