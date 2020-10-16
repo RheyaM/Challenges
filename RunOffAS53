@@ -1,0 +1,66 @@
+def CountVotes():
+  Winner=False
+  A="Alice"
+  B="Bob"
+  C="Charlie"
+  Votes=[[A,B,C],[A,C,B],[B,C,A],[B,A,C],[C,A,B]]
+  CountA=0
+  CountB=0
+  CountC=0
+  y=0
+  for x in range(len(Votes)):
+    if Votes[x][y]==A:
+      CountA=CountA+1
+    elif Votes[x][y]==B:
+      CountB=CountB+1
+    else:
+      CountC=CountC+1
+  if CountA/len(Votes)>0.5:
+    return A
+    Winner=True
+  elif CountB/len(Votes)>0.5:
+    return B
+    Winner=True
+  elif CountC/len(Votes)>0.5:
+    return C
+    Winner=True
+  else:
+    if min(CountA,CountB,CountC)==CountB:
+      CountA=0
+      removed=A
+    elif min(CountA,CountB,CountC)==CountB:
+      CountB=0
+      removed=B
+    else:
+      CountC=0
+      removed=C
+    while Winner==False:
+      y=y+1
+      for x in range(len(Votes)):
+        if Votes[x][y-1]==removed:
+            if Votes[x][y]==A:
+              CountA=CountA+1
+            elif Votes[x][1]==B:
+              CountB=CountB+1
+            else:
+              CountC=CountC+1
+      if CountA/len(Votes)>0.5:
+        return A
+        Winner=True
+      elif CountB/len(Votes)>0.5:
+        return B
+        Winner=True
+      elif CountC/len(Votes)>0.5:
+        return C
+        Winner=True
+      else:
+        if min(CountA,CountB,CountC)==CountB:
+          CountA=0
+          removed=A
+        elif min(CountA,CountB,CountC)==CountB:
+          CountB=0
+          removed=B
+        else:
+          CountC=0
+          removed=C
+print(CountVotes())
