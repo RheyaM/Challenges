@@ -1,0 +1,7 @@
+Inputnumbers = [1, 5, 20, 19, 12]
+Inputnumbers.sort()
+Mindiff=9999999
+for x in range(len(Inputnumbers)-1):
+  if (Inputnumbers[x+1]-Inputnumbers[x])<Mindiff:
+    Mindiff=(Inputnumbers[x+1]-Inputnumbers[x])
+print(Mindiff)
