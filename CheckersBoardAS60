@@ -1,0 +1,21 @@
+board=[]
+symbol="."
+for x in range(4):
+  line=[]
+  for y in range(0,8):
+    line.append(symbol)
+    if symbol==".":
+      symbol="*"
+    else:
+      symbol="."
+  board.append(line)
+  line=[]
+  for y in range(0,8):
+    if symbol==".":
+      symbol="*"
+    else:
+      symbol="."
+    line.append(symbol)
+  board.append(line)
+for x in range(8):
+  print(board[x])
