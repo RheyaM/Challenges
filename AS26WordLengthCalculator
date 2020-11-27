@@ -1,0 +1,11 @@
+with open("file.txt","r") as file:
+    words=0
+    letters=0
+    for line in file:
+       for letter in line:
+          if letter==" ":
+             words=words+1
+          else:
+             letters=letters+1
+       words=words+1
+    print(round((letters/words),2))
