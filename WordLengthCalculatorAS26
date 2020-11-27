@@ -1,7 +1,0 @@
-text=input("Input text:")
-noofletters=len(text)-(text.count(" "))
-totallength=0
-print(noofletters)
-noofwords=text.count(" ")+1
-average=float(noofletters/noofwords)
-print(average)
