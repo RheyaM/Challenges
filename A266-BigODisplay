@@ -1,0 +1,40 @@
+from matplotlib.pyplot import ylabel, plot, show, xlabel, title
+import math
+
+
+def quadratic():
+    w = [2, 4, 6, 8, 10, 12]
+    t = [4, 16, 36, 64, 100, 144]
+    return w, t
+
+
+def log():
+    w = [2, 3, 4, 5, 6, 8, 10, 12]
+    t = []
+    for value in w:
+        t.append(math.log(value, 10))
+    return w, t
+
+
+def expon():
+    w = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 11.5, 12]
+    t = []
+    for value in w:
+        t.append(2 ** value)
+    return w, t
+
+
+def fact():
+    w = [2, 4, 6, 8, 10]
+    t = []
+    for value in w:
+        t.append(math.factorial(value))
+    return w, t
+
+
+x, y = fact()
+plot(x, y, 'b')
+xlabel('Inputs')
+ylabel('Steps')
+title('Linear Complexity')
+show()
