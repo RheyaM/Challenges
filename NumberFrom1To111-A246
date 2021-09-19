@@ -1,0 +1,18 @@
+num = int(input())
+Max = 112
+Min = 1
+found = False
+count = 0
+
+while not found:
+  count += 1
+  guess = int((Min+Max)/2)
+  if guess == num:
+    found = True
+  elif guess > num:
+    Max = guess
+  else:
+    Min = guess
+
+print("Number is:",guess)
+print("Guesses taken:",count)
